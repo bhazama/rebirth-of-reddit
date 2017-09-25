@@ -1,0 +1,9 @@
+body {
+  background-color: cornflowerblue; }
+  @media screen and (min-width: 0px) {
+    body {
+      background-color: orange; } }
+
+#firstImg {
+  max-height: 200px;
+  max-width: 200px; }
