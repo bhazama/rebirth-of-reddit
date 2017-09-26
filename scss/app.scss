@@ -1,0 +1,108 @@
+// variables
+$bg-color: cornflowerblue;
+
+#main {
+  //padding: 50px;
+}
+
+#title {
+  align-content: center;
+  margin: auto;
+  font-family: 'Oswald', sans-serif;
+}
+
+.container {
+  background-color: white;
+  width: 350px;
+  length: 400px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  margin-bottom: 25px;
+
+
+  @media screen and (min-width: 0px){
+    background-color: white;
+    width: 250px;
+    length: 250px;
+    border-style: solid;
+    // margin-left: 15px;
+    // margin-bottom: 20px;
+    padding-left: 50px;
+    padding-top: 50px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  @media screen and (min-width: 500px){
+    background-color: white;
+    width: 450px;
+    padding-left: 50px;
+    padding-top: 50px;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+
+  @media screen and (min-width: 700px){
+    background-color: white;
+    width: 600px;
+    padding-left: 85px;
+    padding-top: 75px;
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: 1100px){
+    background-color: white;
+    width: 350px;
+    padding-right: 40px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-left: 25px;
+    display: inline-block;
+
+  }
+
+
+}
+
+.Image {
+  // width: 300px;
+  // length: 300px;
+
+  @media screen and (min-width: 0px){
+    width: 200px;
+    length: 500px;
+    margin: auto;
+  }
+  @media screen and (min-width: 500px){
+    width: 400px;
+    length: 450px;
+    margin: auto;
+    //display: inline;
+  }
+  @media screen and (min-width: 700px){
+    width: 500px;
+    length: 750px;
+    margin: auto;
+  }
+
+  @media screen and (min-width: 1100px){
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 50px;
+
+  }
+
+
+
+}
+
+#main {
+}
+
+body {
+  background-color: violet;
+}

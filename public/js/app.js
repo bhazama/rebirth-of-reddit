@@ -2,68 +2,78 @@
 
 let main = document.getElementById("main");
 
- function requestListener(){
-   let artList = JSON.parse(this.responseText);
-   let art = artList.data.children;
-   console.log(art);
+
+
+function requestListener(){
+   let postList = JSON.parse(this.responseText);
+   let post = postList.data.children;
+   console.log(post);
 
    for(let i = 0; i < 4; i++){
 
     //CONTAINER
-    var firstContainer = document.createElement("div");
-    firstContainer.id = "firstContainer";
-    main.appendChild(firstContainer);
+    var container = document.createElement("div");
+    container.className = "container";
+    main.appendChild(container);
 
     //IMAGE
-    var artImage = document.createElement("img");
-    artImage.className = "artImage";
-    var artURL = art[i].data.url;
-    artImage.src = artURL;
-    firstContainer.appendChild(artImage);
+    var image = document.createElement("img");
+    image.className = "Image";
+    var imgURL = post[i].data.url;
+    image.src = imgURL;
+    container.appendChild(image);
     //console.log(artURL);
 
     //TITLE
     var title = document.createElement("div");
     title.className = "title";
-    var titleURL = "Title: " + art[i].data.title;
+    var titleURL = "Title: " + post[i].data.title;
     title.innerHTML = titleURL;
-    firstContainer.appendChild(title);
+    container.appendChild(title);
 
     //AUTHOR
     var author = document.createElement("div");
     author.className = "author";
-    var authorURL = "Author: " + art[i].data.author;
+    var authorURL = "Author: " + post[i].data.author;
     author.innerHTML = authorURL;
-    firstContainer.appendChild(author);
+    container.appendChild(author);
 
     //DATE
     var date = document.createElement("div");
     date.className = "date";
-    var dateURL = "Date: " + new Date(art[i].data.created*1000);
+    var dateURL = "Date: " + new Date(post[i].data.created*1000);
     date.innerHTML = dateURL;
-    firstContainer.appendChild(date);
+    container.appendChild(date);
 
     //COMMENTS
     var score = document.createElement("div");
     score.className = "score";
-    var scoreURL = "Score: " + art[i].data.score;
+    var scoreURL = "Score: " + post[i].data.score;
     score.innerHTML = scoreURL;
-    firstContainer.appendChild(score);
-
-
-
-
-
-
-
-
+    container.appendChild(score);
   }
 }
 
-var artReq = new XMLHttpRequest();
-artReq.addEventListener("load", requestListener);
-artReq.open("GET", "https://www.reddit.com/r/art/.json");
-artReq.send();
+
+function request(url, callback){
+  let req = new XMLHttpRequest();
+  req.addEventListener("load", callback);
+  req.open("GET", url);
+  req.send();
+}
+
+request("http://www.reddit.com/r/art.json",requestListener);
+
+
+
+
+
+
+// var artReq = new XMLHttpRequest();
+// artReq.addEventListener("load", requestListener);
+// artReq.open("GET", "https://www.reddit.com/r/art/.json");
+// artReq.send();
+
 
 
 
