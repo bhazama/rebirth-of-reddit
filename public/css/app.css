@@ -1,9 +1,16 @@
-body {
-  background-color: cornflowerblue; }
-  @media screen and (min-width: 0px) {
-    body {
-      background-color: orange; } }
-
 #firstImg {
-  max-height: 200px;
-  max-width: 200px; }
+  width: 500px; }
+
+#bgBorder1 {
+  background-color: black;
+  length: 00px;
+  margin: auto;
+  width: 200px;
+  position: relative; }
+
+#firstContainer {
+  max-width: 250px;
+  padding: 200px; }
+
+body {
+  background-color: violet; }
