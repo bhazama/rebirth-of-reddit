@@ -1,16 +1,29 @@
-#firstImg {
-  width: 500px; }
-
-#bgBorder1 {
-  background-color: black;
-  length: 00px;
+#title {
+  align-content: center;
   margin: auto;
-  width: 200px;
-  position: relative; }
+  font-family: 'Oswald', sans-serif; }
 
-#firstContainer {
-  max-width: 250px;
-  padding: 200px; }
+.firstContainer {
+  background-color: white;
+  width: 400px;
+  length: 400px; }
+
+.artImage {
+  width: 300px;
+  length: 300px; }
+
+@media screen and (min-width: 0px) {
+  #main {
+    max-width: 300px;
+    max-length: 300px;
+    margin: auto; } }
+
+@media screen and (min-width: 500px) {
+  #main {
+    max-width: 600px;
+    max-length: 600px;
+    margin: auto;
+    display: inline; } }
 
 body {
   background-color: violet; }
