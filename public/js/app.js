@@ -1,9 +1,10 @@
 // jshint esversion: 6
 
+// SECTION WHERE ALL PICTURE INFORMATION GOES
 let main = document.getElementById("main");
 
 
-
+//FUNCTION THAT GOES INTO EVENT LISTENER
 function requestListener(){
    let postList = JSON.parse(this.responseText);
    let post = postList.data.children;
@@ -54,15 +55,31 @@ function requestListener(){
   }
 }
 
-
+// FUNCTION TO MAKE XHR REQUEST
 function request(url, callback){
   let req = new XMLHttpRequest();
   req.addEventListener("load", callback);
   req.open("GET", url);
   req.send();
 }
-
+//FIRST REQUEST
 request("http://www.reddit.com/r/art.json",requestListener);
+
+//EVENT LISTENER FOR MYBOARDS TEXT
+document.getElementById("myBoards").addEventListener("click", function(){
+  request("https://www.reddit.com/r/beach/.json", requestListener);
+});
+
+//EVENT LISTENER FOR RANDOM TEXT
+  document.getElementById("random").addEventListener("click",function(){
+    request("https://www.reddit.com/r/birdswitharms/.json", requestListener);
+  });
+
+//EVENT LISTENER FOR GET-THE-APP TEXT
+  document.getElementById("getTheApp").addEventListener("click",function(){
+    request("https://www.reddit.com/r/TheWayWeWere/.json", requestListener);
+  });
+
 
 
 

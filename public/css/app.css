@@ -62,7 +62,7 @@
       margin-bottom: 50px;
       margin-left: 50px;
       display: inline-block; } }
-  @media screen and (min-width: 1350px) {
+  @media screen and (min-width: 1300px) {
     .container {
       background-color: white;
       width: 475px;
@@ -98,7 +98,7 @@
     margin: auto;
     margin-bottom: 50px; } }
 
-@media screen and (min-width: 1350px) {
+@media screen and (min-width: 1300px) {
   .Image {
     background-color: white;
     width: 400px;
