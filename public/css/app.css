@@ -57,7 +57,7 @@
       length: 250px;
       border-style: solid;
       padding-left: 3px;
-      padding-top: 25px;
+      padding-top: 55px;
       margin-top: 50px;
       margin: auto;
       margin-bottom: 50px; } }
@@ -144,5 +144,5 @@ body {
   background-color: #993d00;
   margin: 0px; }
 
-div:hover, span:hover, #mainTitle:hover, #plusIcon:hover {
+div:hover, span:hover, #plusIcon:hover {
   color: orange; }
