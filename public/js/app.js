@@ -78,7 +78,7 @@ request("http://www.reddit.com/r/art.json",requestListener);
 
 //EVENT LISTENER FOR MYBOARDS TEXT
 document.getElementById("myBoards").addEventListener("click", function(){
-  request("https://www.reddit.com/r/beach/.json", requestListener);
+  request("https://www.reddit.com/r/pics/.json", requestListener);
 });
 
 //EVENT LISTENER FOR RANDOM TEXT
