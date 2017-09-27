@@ -73,24 +73,26 @@ function request(url, callback){
   req.send();
   main.innerHTML = "";
 }
+
 //FIRST REQUEST
 request("http://www.reddit.com/r/art.json",requestListener);
 
-//EVENT LISTENER FOR MYBOARDS TEXT
-document.getElementById("myBoards").addEventListener("click", function(){
-  request("https://www.reddit.com/r/pics/.json", requestListener);
+
+function makeRequest(elementID, URL){
+  document.getElementById(elementID).addEventListener("click", function(){
+  request(URL, requestListener);
 });
+}
 
-//EVENT LISTENER FOR RANDOM TEXT
-  document.getElementById("random").addEventListener("click",function(){
-    request("https://www.reddit.com/r/birdswitharms/.json", requestListener);
-  });
 
-//EVENT LISTENER FOR GET-THE-APP TEXT
-  document.getElementById("getTheApp").addEventListener("click",function(){
-    request("https://www.reddit.com/r/TheWayWeWere/.json", requestListener);
-  });
+//EVENT LISTENER FOR MYBOARDS TEXT
+makeRequest("myBoards", "https://www.reddit.com/r/pics/.json");
 
+// //EVENT LISTENER FOR RANDOM TEXT
+makeRequest("random","https://www.reddit.com/r/birdswitharms/.json");
+
+// //EVENT LISTENER FOR GET-THE-APP TEXT
+makeRequest("getTheApp","https://www.reddit.com/r/TheWayWeWere/.json");
 
 
 
