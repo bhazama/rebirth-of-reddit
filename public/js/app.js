@@ -3,6 +3,13 @@
 // SECTION WHERE ALL PICTURE INFORMATION GOES
 let main = document.getElementById("main");
 
+// MAKING PLUS ICON FOR TITLE BAR
+var plusIcon = document.createElement("i");
+  plusIcon.id = "plusIcon";
+  plusIcon.className = "fa fa-plus-square-o";
+  // plusIcon.innerHTML = "fa fa-plus-square-o";
+  document.getElementById("mainTitle").appendChild(plusIcon);
+
 
 //FUNCTION THAT GOES INTO EVENT LISTENER
 function requestListener(){
@@ -20,6 +27,9 @@ function requestListener(){
     //IMAGE
     var image = document.createElement("img");
     image.className = "Image";
+    if(post[i].data.url === undefined){
+      i++;
+    }
     var imgURL = post[i].data.url;
     image.src = imgURL;
     container.appendChild(image);
@@ -61,6 +71,7 @@ function request(url, callback){
   req.addEventListener("load", callback);
   req.open("GET", url);
   req.send();
+  main.innerHTML = "";
 }
 //FIRST REQUEST
 request("http://www.reddit.com/r/art.json",requestListener);

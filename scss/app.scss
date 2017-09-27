@@ -5,28 +5,78 @@ $bg-color: cornflowerblue;
   //padding: 50px;
 }
 
-#title {
-  text-align: center;
+#mainTitle {
+  background-color: white;
+  //background-image: url("/assets/header_bg.svg");
+  //background-image: url("/assets/logo.svg");
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  padding-bottom: 10px;
+  text-align: left;
   margin: auto;
   font-family: 'Oswald', sans-serif;
-  font-size: 50px;
+  font-size: 35px;
+  color: #666666;
+  //position: absolute;
+
 }
 
 #navigation {
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  line-height: 40px;
+  color: #8c8c8c;
   text-align: center;
   display: inline;
-  padding: 20px;
+  //position: fixed;
+  //padding: 20px;
 }
 
+#menuBar {
+  background-color:#404040;
+  padding: 8px;
+  margin-top: 0px;
+}
+
+#plusIcon {
+  float: right;
+  padding-top: 10px;
+  padding-right: 20px;
+  font-size: 40px;
+  // border-style: solid;
+  // border-width: thin;
+  // margin: auto;
+}
+
+#myBoards{
+  border-right: solid;
+  border-width: thin;
+  padding: 25px;
+  //margin-right: 10px;
+}
+
+#random {
+  border-right: solid;
+  border-width: thin;
+  padding: 25px;
+}
+
+#getTheApp {
+  padding: 25px;
+  border-width: thin;
+}
+
+
+
 .container {
-  background-color: white;
+  background-color: black;
   width: 350px;
   length: 400px;
   font-family: 'Oswald', sans-serif;
   font-size: 20px;
   margin-bottom: 25px;
+
 
 
   @media screen and (min-width: 0px){
@@ -61,10 +111,10 @@ $bg-color: cornflowerblue;
     padding-top: 50px;
     display: block;
     margin-top: 50px;
-    margin-bottom: 50px;
     margin-left: 20px;
-    text-align: center;
     margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
   }
 
   @media screen and (min-width: 1100px){
@@ -119,7 +169,7 @@ $bg-color: cornflowerblue;
     background-color: white;
     width: 325px;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
   }
 
@@ -137,8 +187,20 @@ $bg-color: cornflowerblue;
 
 
 #main {
+  color: black;
 }
 
 body {
-  background-color: violet;
+  background-color: #993d00;
+  margin: 0px;
+
 }
+
+div:hover, span:hover, #mainTitle:hover ,#plusIcon:hover {
+  color: orange;
+}
+
+// :hover{
+//   color: orange;
+// }
+
